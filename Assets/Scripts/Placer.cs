@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 public class Placer : MonoBehaviour
@@ -11,6 +13,15 @@ public class Placer : MonoBehaviour
     public Color InvailedColour = Color.red;
 
     private bool canPlace = true;
+    private static HashSet<Vector3Int> takencells = new HashSet<Vector3Int>();
+    private Vector3Int currentCell;
+
+    private bool CanPlace => !takencells.Contains(currentCell);
+
+    //rotation
+    private float currentRotation;
+    private const float ROTATION_STEP = 90f;
+
     void Update()
     {
         if(SelectedFactory.factorySelected == null)
@@ -20,11 +31,14 @@ public class Placer : MonoBehaviour
         }
 
         spriteRenderer.sprite = SelectedFactory.factorySelected.GetComponent<SpriteRenderer>().sprite;
+        transform.localScale = SelectedFactory.factorySelected.transform.localScale;
+
+        HandleRotation();
 
         SnapToGrid();
         updateColour();
         
-        if(Input.GetMouseButtonDown(0) && canPlace)
+        if(Input.GetMouseButtonDown(0) && canPlace && CanPlace)
         {
             PlaceObject();
         }
@@ -37,7 +51,9 @@ public class Placer : MonoBehaviour
 
         Vector3Int cellPos = tilemap.WorldToCell(mouseWorldPos);
         Vector3 snappedPos = tilemap.GetCellCenterWorld(cellPos);
-        Vector3 finalPos = new Vector3(snappedPos.x, snappedPos.y + 0.5f);
+        float offset = SelectedFactory.factorySelected.CompareTag("Rotatable") ? 0 : 0f;
+        Vector3 finalPos = new Vector3(snappedPos.x, snappedPos.y + offset);
+        currentCell = tilemap.WorldToCell(mouseWorldPos);
 
         transform.position = finalPos;
     }
@@ -49,7 +65,9 @@ public class Placer : MonoBehaviour
 
     void PlaceObject()
     {
-        Instantiate(SelectedFactory.factorySelected, transform.position, transform.rotation);
+        Instantiate(SelectedFactory.factorySelected, transform.position, Quaternion.Euler(0f, 0f, currentRotation)).GetComponent<GridPosition>().position = currentCell;
+        takencells.Add(currentCell);
+        SelectedFactory.factorySelected = null;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -66,5 +84,23 @@ public class Placer : MonoBehaviour
         {
             canPlace = true;
         }
+    }
+
+    void HandleRotation()
+    {
+        if (!SelectedFactory.factorySelected.CompareTag("Rotatable"))
+        {
+            currentRotation = 0f;
+            transform.rotation = Quaternion.identity;
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            currentRotation += ROTATION_STEP;
+            currentRotation %= 360f;
+        }
+
+        transform.rotation = Quaternion.Euler(0f, 0f, currentRotation);
     }
 }   

@@ -2,6 +2,7 @@ using UnityEditor.Rendering;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 
 [System.Serializable]
 public struct Biome
@@ -13,6 +14,8 @@ public struct Biome
     public float maxTemp;
     public float minHum;
     public float maxHum;
+
+    public GameObject itemPrefab;
 }
 
 [System.Serializable]
@@ -33,14 +36,22 @@ public struct MapData
 
 public class WorldGen : MonoBehaviour
 {
+    public static WorldGen instance;
+
     public int mapSize;
     public int seed;
     public float circleSizePercentageOfMapSize;
 
     public MapData[] mapData;
     public Biome[] biomes;
+    public Biome[,] biomeMap;
 
     public Tilemap tilemap;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
@@ -53,6 +64,8 @@ public class WorldGen : MonoBehaviour
         mapData[1].data = GenrateNoiseMap(mapSize, seed, mapData[1].scale, mapData[1].octaves, mapData[1].persistance, mapData[1].lacunarity);
 
         int halfSize = (mapSize / 2);
+
+        biomeMap = new Biome[mapSize, mapSize];
 
        for(int y = 0; y < mapSize; y++)
         {
@@ -74,6 +87,7 @@ public class WorldGen : MonoBehaviour
                     if (temp >= biome.minTemp && temp <= biome.maxTemp && hum >= biome.minHum && hum <= biome.maxHum)
                     {
                         tilemap.SetTile(new Vector3Int(x - halfSize, y - halfSize, 0), biome.Tile);
+                        biomeMap[x, y] = biome;
                         break;
                     }
                 }

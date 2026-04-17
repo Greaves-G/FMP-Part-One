@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Taken
+  - Rotatable
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -12,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Conveyor
   - 
   - 
   - 
@@ -42,8 +44,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: 'BackGround '
+  - name: Conveyor
     uniqueID: 2027982625
+    locked: 0
+  - name: Item
+    uniqueID: 2990840039
+    locked: 0
+  - name: Factory
+    uniqueID: 1779165807
     locked: 0
   m_RenderingLayers:
   - Default

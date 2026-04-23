@@ -441,7 +441,7 @@ MonoBehaviour:
         m_MethodName: SetSelectedFactory
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8889449517146013476, guid: a4034d5b43ad2cf46a543929b670b71b, type: 3}
+          m_ObjectArgument: {fileID: 8102757049280051342, guid: c0e8611caa82d5a4f91b613485971446, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -952,7 +952,7 @@ Grid:
   m_Enabled: 1
   m_CellSize: {x: 1, y: 1, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
-  m_CellLayout: 2
+  m_CellLayout: 1
   m_CellSwizzle: 0
 --- !u!4 &264834694
 Transform:
@@ -998,35 +998,35 @@ MonoBehaviour:
     lacunarity: 2.4
   biomes:
   - Name: Water
-    Tile: {fileID: 11400000, guid: 5bb848605edcbc3469f797d34e805ac9, type: 2}
+    Tile: {fileID: 11400000, guid: fad4b4be0b48d4a40887114114c96fb6, type: 2}
     minTemp: 0
     maxTemp: 1
     minHum: 0.9
     maxHum: 1
     itemPrefab: {fileID: 0}
   - Name: Grass
-    Tile: {fileID: 11400000, guid: 5e31566fc02ff354491d6d2614fb996c, type: 2}
+    Tile: {fileID: 11400000, guid: 7cbc2e2870acb0e4d80d2de4f1fcb8d9, type: 2}
     minTemp: 0.35
     maxTemp: 1
     minHum: 0.3
     maxHum: 0.9
     itemPrefab: {fileID: 6389402054215547463, guid: a9f8327f54707eb4e943b120a9a7a3d8, type: 3}
   - Name: Desert
-    Tile: {fileID: 11400000, guid: 0ef85fb9554f1444bb2a8ee4ea0abaaf, type: 2}
+    Tile: {fileID: 11400000, guid: b2b957b09afde1140b6dc0347fda3b0d, type: 2}
     minTemp: 0.35
     maxTemp: 1
     minHum: 0
     maxHum: 0.3
     itemPrefab: {fileID: 2954546995789084878, guid: fed33e2f7045f504c93df693535fcb8e, type: 3}
   - Name: Snow
-    Tile: {fileID: 11400000, guid: 4060a7a6df4502343b260206aa877c1c, type: 2}
+    Tile: {fileID: 11400000, guid: 76c20c2c760b0e047a2daf253ccd7828, type: 2}
     minTemp: 0
     maxTemp: 0.35
     minHum: 0.4
     maxHum: 0.9
     itemPrefab: {fileID: 9136662560076962986, guid: 0d0ad779c5696c44c8b6839b7d16f6c2, type: 3}
   - Name: Other grass
-    Tile: {fileID: 11400000, guid: d6ad968683b93dd4db15f600724f2798, type: 2}
+    Tile: {fileID: 11400000, guid: c78d70e0e1d2da54c8c23a6eec7a61d6, type: 2}
     minTemp: 0
     maxTemp: 0.35
     minHum: 0
@@ -1490,7 +1490,7 @@ MonoBehaviour:
         m_MethodName: SetSelectedFactory
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8034700705289526718, guid: 78e15b480d22c0742b04d76eec8a9d33, type: 3}
+          m_ObjectArgument: {fileID: 5564887293127844502, guid: 63301f887d6570d47a586f07730ca3ae, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3263,7 +3263,7 @@ MonoBehaviour:
         m_MethodName: SetSelectedFactory
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8500669492410876857, guid: 2f07d5fb48900214c853ee0bc41582c6, type: 3}
+          m_ObjectArgument: {fileID: 8322985980102845051, guid: 252fcbc67aead054c975abee1f886a96, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3409,7 +3409,7 @@ MonoBehaviour:
         m_MethodName: SetSelectedFactory
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 3748076018928958328, guid: add7a86e9f937dc4c90e5673f9e61a32, type: 3}
+          m_ObjectArgument: {fileID: 1814872776859162454, guid: 04642d97da42b214d834c6edf5497d9d, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3620,7 +3620,7 @@ MonoBehaviour:
         m_MethodName: SetSelectedFactory
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1864094924725758876, guid: 19c3e7292c031e1499eca1b6e345a719, type: 3}
+          m_ObjectArgument: {fileID: 3948208219724960137, guid: a5045d8753eb6ef4cb567714606c453e, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0

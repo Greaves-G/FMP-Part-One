@@ -38,10 +38,15 @@ public class Conveyor : MonoBehaviour
 
         foreach (Transform point in transferPoints)
         {
+            if (item == null) break;
+
             yield return MoveItemConstantSpeed(item.transform, point.position);
         }
 
-        item.beingTransfered = false;
+        if (item != null)
+        {
+            item.beingTransfered = false;
+        }
     }
 
     private IEnumerator MoveItemConstantSpeed(Transform item, Vector3 target)
@@ -57,10 +62,16 @@ public class Conveyor : MonoBehaviour
             elapsed += Time.deltaTime;
             float t = elapsed / duration;
 
+            if (item == null) break;
+
             item.position = Vector3.Lerp(startPos, target, t);
             yield return null;
         }
 
-        item.position = target;
+        if (item != null)
+        {
+            item.position = target;
+        }
+        
     }
 }

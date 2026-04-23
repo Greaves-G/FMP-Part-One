@@ -20,7 +20,7 @@ public class Placer : MonoBehaviour
 
     //rotation
     private float currentRotation;
-    private const float ROTATION_STEP = 90f;
+    private const float ROTATION_STEP = 45f;
 
     void Update()
     {

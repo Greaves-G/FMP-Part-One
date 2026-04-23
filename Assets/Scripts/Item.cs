@@ -6,6 +6,8 @@ public class Item : MonoBehaviour
 {
     public bool beingTransfered;
 
+    public ItemSO itemType;
+
     private Dictionary<Conveyor, float> conveyorTimeStamps = new Dictionary<Conveyor, float>();
 
     public bool HasVisistedRecently(Conveyor converyor, float cooldown)

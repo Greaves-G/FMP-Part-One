@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db32a6f1ca777548acdd7d880f41cbc, type: 3}
   m_Name: Stone
   m_EditorClassIdentifier: 
-  name: 
-  icon: {fileID: 0}
+  name: StoneBricks
+  icon: {fileID: -822757247, guid: e2d6a955d790f0443b97e6bcf70e68a9, type: 3}
+  smeltedItem: {fileID: 9136662560076962986, guid: f52c9a5005a7eb749bbdc897c04477fe, type: 3}

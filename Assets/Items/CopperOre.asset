@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db32a6f1ca777548acdd7d880f41cbc, type: 3}
   m_Name: CopperOre
   m_EditorClassIdentifier: 
-  name: 
-  icon: {fileID: 0}
+  name: CopperBar
+  icon: {fileID: 1683669600, guid: c709420b6a328e44e9b0fbcdf2854924, type: 3}
+  smeltedItem: {fileID: 5492156737847957047, guid: eeb15292682c78f45bfa7adc2cdf2375, type: 3}

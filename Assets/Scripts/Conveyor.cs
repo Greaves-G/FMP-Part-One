@@ -11,7 +11,7 @@ public class Conveyor : MonoBehaviour
 
     public float cooldownTimer = 1f;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Item")) return;
 
@@ -22,19 +22,24 @@ public class Conveyor : MonoBehaviour
             return;
         }
 
+        item.MarksVisited(this);
         StartCoroutine(HandleItemTransfer(item));
     }
 
-    private IEnumerator HandleItemTransfer(Item item)
+    protected virtual IEnumerator HandleItemTransfer(Item item)
     {
+        float timeWaited = 0f;
         while (item.beingTransfered)
         {
             yield return null;
+            timeWaited += Time.deltaTime;
+            if (timeWaited > 0.5f)
+            {
+                yield break;
+            }
         }
 
         item.beingTransfered = true;
-
-        item.MarksVisited(this);
 
         foreach (Transform point in transferPoints)
         {
@@ -49,7 +54,7 @@ public class Conveyor : MonoBehaviour
         }
     }
 
-    private IEnumerator MoveItemConstantSpeed(Transform item, Vector3 target)
+    protected IEnumerator MoveItemConstantSpeed(Transform item, Vector3 target)
     {
         float distance = Vector3.Distance(item.position, target);
         float duration = distance / moveSpeed;

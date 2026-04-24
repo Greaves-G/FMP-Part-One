@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db32a6f1ca777548acdd7d880f41cbc, type: 3}
   m_Name: IronOre
   m_EditorClassIdentifier: 
-  name: 
-  icon: {fileID: 0}
+  name: IronBar
+  icon: {fileID: -319794313, guid: 66610406ddcc73a4ab9f7b053fba7b6c, type: 3}
+  smeltedItem: {fileID: 6389402054215547463, guid: 96660f6623822fe4aa9225bd19bb2243, type: 3}

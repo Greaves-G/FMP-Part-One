@@ -14,7 +14,7 @@ public class Item : MonoBehaviour
     {
         if (conveyorTimeStamps.TryGetValue(converyor, out float lastTime))
         {
-            if (Time.time - lastTime > cooldown) return true;
+            return (Time.time - lastTime > cooldown);
         }
         return false;
     }

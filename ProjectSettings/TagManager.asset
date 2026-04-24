@@ -7,6 +7,7 @@ TagManager:
   - Taken
   - Rotatable
   - Item
+  - StartConveyor
   layers:
   - Default
   - TransparentFX

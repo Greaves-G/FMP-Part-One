@@ -24,6 +24,12 @@ public class Placer : MonoBehaviour
 
     void Update()
     {
+        if (SelectedFactory.isDeleting)
+        {
+            HandleDeleteMode();
+            return;
+        }
+
         if(SelectedFactory.factorySelected == null)
         {
             spriteRenderer.color = new Color(1, 1, 1, 0);
@@ -102,5 +108,37 @@ public class Placer : MonoBehaviour
         }
 
         transform.rotation = Quaternion.Euler(0f, 0f, currentRotation);
+    }
+
+    void HandleDeleteMode()
+    {
+        spriteRenderer.color = new Color(1, 1, 1, 0);
+
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPos.z = 0f;
+
+        Vector3Int cellPos = tilemap.WorldToCell(mouseWorldPos);
+
+        if (Input.GetMouseButton(0))
+        {
+            TryDeleteAt(cellPos);
+        }
+    }
+
+    void TryDeleteAt(Vector3Int cellPos)
+    {
+        GridPosition[] all = FindObjectsOfType<GridPosition>();
+
+        foreach (var obj in all)
+        {
+            if (obj.position == cellPos)
+            {
+                takencells.Remove(cellPos);
+
+                Destroy(obj.gameObject);
+
+                return;
+            }
+        }
     }
 }   

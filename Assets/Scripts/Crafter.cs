@@ -1,10 +1,8 @@
-using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Rendering;
 
+[System.Serializable]
 public class Recipe
 {
     public string name;
@@ -23,7 +21,7 @@ public class Crafter : MonoBehaviour
 
     private Dictionary<ItemSO, int> inventory = new Dictionary<ItemSO, int>();
 
-    private List<Transform> startConveyors = new List<Transform>();
+    private  List<Transform> startConveyors = new List<Transform>();
     private int outputIndex;
 
     private HashSet<Item> ignoredItems = new HashSet<Item>();
@@ -87,7 +85,7 @@ public class Crafter : MonoBehaviour
         {
             if (recipe.producedItem == null) continue;
 
-            if (HasIngrediant(recipe))
+            if (HasIngredients(recipe))
                 return recipe;
         }
 
@@ -98,11 +96,11 @@ public class Crafter : MonoBehaviour
     {
         foreach(ItemSO required in recipe.requiredItems)
         {
-            if (!inventory.TryGetValue(required), out int count) || count <= 0)
+            if (!inventory.TryGetValue(required, out int count) || count <= 0)
                 return false;
         }
-        
-        return true
+
+        return true;
     }
 
     void ConsumeIngredients(Recipe recipe)
@@ -142,7 +140,7 @@ public class Crafter : MonoBehaviour
     
     IEnumerator RemoveIgnoredItemAfterDelay(Item item)
     {
-        yield return new WaitForSeconds(IgnoreDuration);
+        yield return new WaitForSeconds(ingoredDuration);
 
         ignoredItems.Remove(item);
     }

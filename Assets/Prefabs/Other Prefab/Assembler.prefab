@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 1329261968020363676}
   - component: {fileID: 5107312060822170727}
   - component: {fileID: -418985014860391112}
-  - component: {fileID: -3363223178596108503}
+  - component: {fileID: 3875176852176805276}
+  - component: {fileID: 331328922871093553}
+  - component: {fileID: 8555479449213592392}
   m_Layer: 0
   m_Name: Assembler
   m_TagString: Untagged
@@ -102,7 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 0}
---- !u!114 &-3363223178596108503
+--- !u!114 &3875176852176805276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +113,77 @@ MonoBehaviour:
   m_GameObject: {fileID: 5963230559547945619}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 048ef467785d96648b025f79c623864e, type: 3}
+  m_Script: {fileID: 11500000, guid: 58804395c601ff843baa766bf052dc21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {x: 0, y: 0, z: 0}
+  craftTime: 2
+  recipes:
+  - name: CopperWire
+    producedItem: {fileID: 9136662560076962986, guid: 89d3b418e7b4ba842a1abc4c233ff324, type: 3}
+    requiredItems:
+    - {fileID: 11400000, guid: 58307f1e3c00689459be5c484ab52b99, type: 2}
+    - {fileID: 11400000, guid: 58307f1e3c00689459be5c484ab52b99, type: 2}
+  ingoredDuration: 2
+--- !u!58 &331328922871093553
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5963230559547945619}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.7
+--- !u!50 &8555479449213592392
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5963230559547945619}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

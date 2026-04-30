@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Stone
   m_EditorClassIdentifier: 
   name: StoneBricks
-  icon: {fileID: -822757247, guid: e2d6a955d790f0443b97e6bcf70e68a9, type: 3}
+  icon: {fileID: 1975287506, guid: 65a703c1e390fb94089a2259d11e2793, type: 3}
   smeltedItem: {fileID: 9136662560076962986, guid: f52c9a5005a7eb749bbdc897c04477fe, type: 3}

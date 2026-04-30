@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: CoalOre
   m_EditorClassIdentifier: 
   name: 
-  icon: {fileID: 0}
+  icon: {fileID: 957033217, guid: 0a61f2fe5fda8ae4bb01872dcc3b3ddd, type: 3}
+  smeltedItem: {fileID: 0}

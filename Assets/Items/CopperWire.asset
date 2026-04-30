@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CopperWire
   m_EditorClassIdentifier: 
   name: 
-  icon: {fileID: 0}
+  icon: {fileID: 1927264987, guid: 86b010093770d07448f74c4ddd081342, type: 3}
   smeltedItem: {fileID: 0}

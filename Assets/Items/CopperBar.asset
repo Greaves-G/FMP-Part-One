@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CopperBar
   m_EditorClassIdentifier: 
   name: 
-  icon: {fileID: 0}
+  icon: {fileID: 1683669600, guid: c709420b6a328e44e9b0fbcdf2854924, type: 3}
   smeltedItem: {fileID: 0}

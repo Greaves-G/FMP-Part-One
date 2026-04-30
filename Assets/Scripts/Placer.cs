@@ -12,6 +12,8 @@ public class Placer : MonoBehaviour
     public Color VailColour = Color.green;
     public Color InvailedColour = Color.red;
 
+    public AudioClip buildSFX;
+
     private bool canPlace = true;
     private static HashSet<Vector3Int> takencells = new HashSet<Vector3Int>();
     private Vector3Int currentCell;
@@ -73,7 +75,10 @@ public class Placer : MonoBehaviour
     {
         Instantiate(SelectedFactory.factorySelected, transform.position, Quaternion.Euler(0f, 0f, currentRotation)).GetComponent<GridPosition>().position = currentCell;
         takencells.Add(currentCell);
+        Storage.Instance.RemoveItems(SelectedFactory.factorySelectedRequiredItems);
+        AudioManager.instance.PlaySFX(buildSFX);
         SelectedFactory.factorySelected = null;
+        SelectedFactory.factorySelectedRequiredItems = null;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

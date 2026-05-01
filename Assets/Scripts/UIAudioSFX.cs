@@ -3,16 +3,16 @@ using UnityEngine.EventSystems;
 
 public class UIAudioSFX : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 {
-    public AudioClip hoverClip;
-    public AudioClip clickClip;
+    /*public AudioClip hoverClip;
+    public AudioClip clickClip;*/
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        AudioManager.instance.PlaySFX(hoverClip);
+        AudioManager.instance.PlaySFX(audioClipType.Hover);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        AudioManager.instance.PlaySFX(clickClip);
+        AudioManager.instance.PlaySFX(audioClipType.Click);
     }
 }

@@ -12,7 +12,7 @@ public class Placer : MonoBehaviour
     public Color VailColour = Color.green;
     public Color InvailedColour = Color.red;
 
-    public AudioClip buildSFX;
+    //public AudioClip buildSFX;
 
     private bool canPlace = true;
     private static HashSet<Vector3Int> takencells = new HashSet<Vector3Int>();
@@ -44,9 +44,10 @@ public class Placer : MonoBehaviour
         HandleRotation();
 
         SnapToGrid();
+        MouseToBiome();
         updateColour();
         
-        if(Input.GetMouseButtonDown(0) && canPlace && CanPlace)
+        if(Input.GetMouseButton(0) && canPlace && CanPlace)
         {
             PlaceObject();
         }
@@ -66,6 +67,40 @@ public class Placer : MonoBehaviour
         transform.position = finalPos;
     }
 
+    void MouseToBiome()
+    {
+        if (WorldGen.instance == null) return;
+
+        int halfSize = WorldGen.instance.mapSize / 2;
+
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPos.z = 0;
+
+        Vector3Int cellPos = tilemap.WorldToCell(mouseWorldPos);
+
+        int biomeX = cellPos.x + halfSize;
+        int biomeY = cellPos.y + halfSize;
+
+        if (biomeX < 0 || biomeY <0 ||
+            biomeX >= WorldGen.instance.mapSize ||
+            biomeY >= WorldGen.instance.mapSize)
+        {
+            canPlace = false;
+            return;
+        }
+
+        Biome biome = WorldGen.instance.biomeMap[biomeX, biomeY];
+
+        if (biome.canBePlacedOn)
+        {
+            canPlace = true;
+            return;
+        }
+
+        canPlace = false;
+    }
+
+
     void updateColour()
     {
         spriteRenderer.color = canPlace ? VailColour : InvailedColour;
@@ -76,12 +111,12 @@ public class Placer : MonoBehaviour
         Instantiate(SelectedFactory.factorySelected, transform.position, Quaternion.Euler(0f, 0f, currentRotation)).GetComponent<GridPosition>().position = currentCell;
         takencells.Add(currentCell);
         Storage.Instance.RemoveItems(SelectedFactory.factorySelectedRequiredItems);
-        AudioManager.instance.PlaySFX(buildSFX);
-        SelectedFactory.factorySelected = null;
-        SelectedFactory.factorySelectedRequiredItems = null;
+        AudioManager.instance.PlaySFX(audioClipType.Build);
+        //SelectedFactory.factorySelected = null;
+        //SelectedFactory.factorySelectedRequiredItems = null;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Taken")
         {
@@ -95,7 +130,7 @@ public class Placer : MonoBehaviour
         {
             canPlace = true;
         }
-    }
+    }*/
 
     void HandleRotation()
     {
@@ -108,7 +143,13 @@ public class Placer : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            currentRotation += ROTATION_STEP;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                currentRotation -= ROTATION_STEP;
+            }
+            else
+                currentRotation += ROTATION_STEP;
+
             currentRotation %= 360f;
         }
 

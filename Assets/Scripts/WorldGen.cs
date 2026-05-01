@@ -15,6 +15,7 @@ public struct Biome
     public float minHum;
     public float maxHum;
 
+    public bool canBePlacedOn;
     public GameObject itemPrefab;
 }
 

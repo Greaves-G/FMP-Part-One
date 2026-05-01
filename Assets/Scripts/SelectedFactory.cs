@@ -11,12 +11,13 @@ public class SelectedFactory : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     public static bool isDeleting;
 
-    public AudioClip errorSFX;
+    //public AudioClip errorSFX;
     public void SetSelectedFactory(GameObject factoryToSelect)
     {
         if (!Storage.Instance.HasItem(requiredItems))
         {
             //play error SFX
+            AudioManager.instance.PlaySFX(audioClipType.Error);
             return;
         }
 

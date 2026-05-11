@@ -15,4 +15,4 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 35c3f5d48fb478145a303275d62480c5, type: 3}
   clipType: 1
   maxPlayerAtOnce: 100
-  startPlayingSpacing: 0.1
+  startPlayingSpacing: 0.5

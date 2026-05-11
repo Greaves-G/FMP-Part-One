@@ -47,7 +47,7 @@ public class Placer : MonoBehaviour
         MouseToBiome();
         updateColour();
         
-        if(Input.GetMouseButton(0) && canPlace && CanPlace)
+        if(Input.GetMouseButton(1) && canPlace && CanPlace)
         {
             PlaceObject();
         }

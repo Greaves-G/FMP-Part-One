@@ -192,6 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe891f1fff009b40910c9548cce1bfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slots: []
+  slots:
+  - type: {fileID: 11400000, guid: fd5347e60c951a240802bde8abc419af, type: 2}
+    amount: 200
   itemPrefab: {fileID: 5200977494842056251, guid: 992326182a3673d4098d99794796d148, type: 3}
   grid: {fileID: 0}

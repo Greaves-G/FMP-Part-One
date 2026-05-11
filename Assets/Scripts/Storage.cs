@@ -32,10 +32,11 @@ public class Storage : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
+    private void FixedUpdate()
     {
         UpdateDisplay();
     }
+
 
     public void AddItem(ItemSO itemType, int amount)
     {
@@ -51,7 +52,6 @@ public class Storage : MonoBehaviour
         }
 
         slots.Add(new Slot(itemType, amount));
-        UpdateDisplay();
     }
 
     public bool HasItem(List<Slot> requiredItems)
@@ -62,8 +62,6 @@ public class Storage : MonoBehaviour
             Slot found = slots.Find(s => s.type == required.type);
 
             if (found == null || found.amount < required.amount) return false;
-            
-            return true;
         }
         
         return true;
@@ -85,8 +83,6 @@ public class Storage : MonoBehaviour
                 }
             }
         }
-
-        UpdateDisplay();
     }
 
     public void UpdateDisplay()

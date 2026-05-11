@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb5b5e1a209e774593e222704fac2d3, type: 3}
   m_Name: Hover
   m_EditorClassIdentifier: 
-  clip: {fileID: 0}
-  clipType: 0
+  clip: {fileID: 8300000, guid: 3c3d46eb1eb0ae8469f9c735a1689405, type: 3}
+  clipType: 2
   maxPlayerAtOnce: 0
   startPlayingSpacing: 0

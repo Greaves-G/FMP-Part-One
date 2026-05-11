@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db32a6f1ca777548acdd7d880f41cbc, type: 3}
   m_Name: CoalOre
   m_EditorClassIdentifier: 
-  name: 
+  name: Coal
   icon: {fileID: 957033217, guid: 0a61f2fe5fda8ae4bb01872dcc3b3ddd, type: 3}
   smeltedItem: {fileID: 0}
+  value: 2

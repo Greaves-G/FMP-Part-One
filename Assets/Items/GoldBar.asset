@@ -15,3 +15,4 @@ MonoBehaviour:
   name: 
   icon: {fileID: 1740113013, guid: 8302107292d8f7e4cb88bc37043d3512, type: 3}
   smeltedItem: {fileID: 0}
+  value: 5

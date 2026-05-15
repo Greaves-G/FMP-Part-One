@@ -32,7 +32,7 @@ public class Storage : MonoBehaviour
         Instance = this;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         UpdateDisplay();
     }

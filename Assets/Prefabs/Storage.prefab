@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8122009758606521356}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5154823, y: -0.486, z: -0.93728733}
+  m_LocalPosition: {x: 0, y: 0, z: -0.93728733}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -192,8 +192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe891f1fff009b40910c9548cce1bfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slots:
-  - type: {fileID: 11400000, guid: fd5347e60c951a240802bde8abc419af, type: 2}
-    amount: 200
+  slots: []
   itemPrefab: {fileID: 5200977494842056251, guid: 992326182a3673d4098d99794796d148, type: 3}
   grid: {fileID: 0}

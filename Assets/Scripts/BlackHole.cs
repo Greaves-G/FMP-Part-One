@@ -13,7 +13,7 @@ public class BlackHole : MonoBehaviour
         if (item == null || item.itemType == null) return;
 
         Storage.Instance.AddItem(darkMatter, item.itemType.value);
-
+        Debug.Log("BlackHole");
         Destroy(collision.gameObject);
     }
 

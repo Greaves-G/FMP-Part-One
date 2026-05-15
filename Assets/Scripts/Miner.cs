@@ -1,13 +1,11 @@
-using NUnit.Framework;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Android.Gradle;
 using UnityEngine;
 
 public class Miner : MonoBehaviour
 {
-    public float extractTime;
+    //public static float extractTime = 2f;
 
     private GridPosition gridPosition;
     private readonly List<Conveyor> conveyors = new List<Conveyor>();
@@ -70,16 +68,16 @@ public class Miner : MonoBehaviour
         cachedItemPrefab = biome.itemPrefab;
     }
 
+
     IEnumerator Running()
     {
-        WaitForSeconds wait = new WaitForSeconds(extractTime);
-
         while (true)
         {
-            yield return wait;
+            yield return new WaitForSeconds(UpgradeManager.Instance.minerExtractTime);
             extract();
         }
     }
+
 
     void extract()
     {

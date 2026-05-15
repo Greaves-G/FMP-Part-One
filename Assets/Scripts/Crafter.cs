@@ -14,7 +14,7 @@ public class Recipe
 
 public class Crafter : MonoBehaviour
 {
-    public float craftTime = 2f;
+    
     public List<Recipe> recipes;
 
     private bool isCrafting;
@@ -117,7 +117,7 @@ public class Crafter : MonoBehaviour
 
         ConsumeIngredients(recipe);
 
-        yield return new WaitForSeconds(craftTime);
+        yield return new WaitForSeconds(UpgradeManager.Instance.AssemblerCraftTime);
 
         if (startConveyors.Count > 0)
         {
@@ -136,6 +136,8 @@ public class Crafter : MonoBehaviour
         isCrafting = false;
 
         TryCraft();
+
+        Debug.Log("Tried To Craft");
     }
     
     IEnumerator RemoveIgnoredItemAfterDelay(Item item)

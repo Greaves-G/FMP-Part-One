@@ -6,7 +6,7 @@ using System.Collections;
 
 public class Smelter : MonoBehaviour
 {
-    public float SmeltTime = 2.0f;
+    //public float SmeltTime = 2.0f;
 
     private bool isProcessing;
 
@@ -52,9 +52,19 @@ public class Smelter : MonoBehaviour
     {
         isProcessing = true;
 
-        yield return new WaitForSeconds(SmeltTime);
+        float timer = 0f;
 
-        if(item != null) 
+        while (timer < UpgradeManager.Instance.FurnaceSmeltSpeed)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        //Debug.Log("Timer: " + timer + " / " + UpgradeManager.Instance.FurnaceSmeltSpeed);
+
+        //yield return new WaitForSeconds(UpgradeManager.Instance.FurnaceSmeltSpeed);
+
+        if (item != null) 
             Destroy(item.gameObject);
 
         if(startConveyors.Count == 0)

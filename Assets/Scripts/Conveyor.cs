@@ -1,13 +1,12 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.UIElements;
 
 public class Conveyor : MonoBehaviour
 {
     //transfer settings
     public List<Transform> transferPoints = new List<Transform>();
-    public float moveSpeed = 2f;
+    //public float moveSpeed;
 
     public float cooldownTimer = 1f;
 
@@ -54,22 +53,19 @@ public class Conveyor : MonoBehaviour
         }
     }
 
+
     protected IEnumerator MoveItemConstantSpeed(Transform item, Vector3 target)
     {
-        float distance = Vector3.Distance(item.position, target);
-        float duration = distance / moveSpeed;
-        float elapsed = 0f;
-
-        Vector3 startPos = item.position;
-
-        while (elapsed < duration)
+        while (Vector3.Distance(item.position, target) > 0.01f)
         {
-            elapsed += Time.deltaTime;
-            float t = elapsed / duration;
+            if (item == null) yield break;
 
-            if (item == null) break;
+            item.position = Vector3.MoveTowards(
+                item.position,
+                target,
+                UpgradeManager.Instance.beltMoveSpeed * Time.deltaTime
+            );
 
-            item.position = Vector3.Lerp(startPos, target, t);
             yield return null;
         }
 
@@ -77,6 +73,11 @@ public class Conveyor : MonoBehaviour
         {
             item.position = target;
         }
-        
     }
+
+
+    /*private void Awake()
+    {
+        moveSpeed = UpgradeManager.Instance.beltMoveSpeed;
+    }*/
 }

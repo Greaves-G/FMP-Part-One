@@ -123,6 +123,36 @@ MonoBehaviour:
     requiredItems:
     - {fileID: 11400000, guid: 58307f1e3c00689459be5c484ab52b99, type: 2}
     - {fileID: 11400000, guid: 58307f1e3c00689459be5c484ab52b99, type: 2}
+  - name: GoldIronAlloy
+    producedItem: {fileID: 2056733974619979138, guid: 445188f6b4066b142833613c26f1d06d, type: 3}
+    requiredItems:
+    - {fileID: 11400000, guid: ae76e41b2d354884e813e342c132d57d, type: 2}
+    - {fileID: 11400000, guid: 93c846d424c29e8418db79dabca9a329, type: 2}
+  - name: EmptyCircuitBored
+    producedItem: {fileID: 7000954663826749874, guid: 84d6529540882b940806fa6d0d22bfec, type: 3}
+    requiredItems:
+    - {fileID: 11400000, guid: 63e44eb0932c69b4bbaa3186aad9169b, type: 2}
+    - {fileID: 11400000, guid: bd2ab78c37e2e54498c06775250d5942, type: 2}
+  - name: IronSheet
+    producedItem: {fileID: 2794682531962403807, guid: 5ed0aa6aac31f12478e0a8fb38d7c9e6, type: 3}
+    requiredItems:
+    - {fileID: 11400000, guid: ae76e41b2d354884e813e342c132d57d, type: 2}
+    - {fileID: 11400000, guid: ae76e41b2d354884e813e342c132d57d, type: 2}
+  - name: GoldSheet
+    producedItem: {fileID: 2470468755748132140, guid: 778bee54a69d50748aadeb2ba3abd9fe, type: 3}
+    requiredItems:
+    - {fileID: 11400000, guid: 8a4addfab3b48e4418d241629807ed56, type: 2}
+    - {fileID: 11400000, guid: 8a4addfab3b48e4418d241629807ed56, type: 2}
+  - name: CircuitBored
+    producedItem: {fileID: 3664780913432812211, guid: e19d50cc258db374da2ee68cd22b8cb4, type: 3}
+    requiredItems:
+    - {fileID: 11400000, guid: 65ad18a5575f99749986ee6d14dd9330, type: 2}
+    - {fileID: 11400000, guid: 63e44eb0932c69b4bbaa3186aad9169b, type: 2}
+  - name: Lazer
+    producedItem: {fileID: 6582921181900150834, guid: 9c919fce753f61045b0a06ee0fb7bd59, type: 3}
+    requiredItems:
+    - {fileID: 11400000, guid: c16f0512ac044fc43885bc91652f921f, type: 2}
+    - {fileID: 11400000, guid: bd2ab78c37e2e54498c06775250d5942, type: 2}
   ingoredDuration: 2
 --- !u!58 &331328922871093553
 CircleCollider2D:

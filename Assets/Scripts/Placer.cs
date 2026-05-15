@@ -169,6 +169,7 @@ public class Placer : MonoBehaviour
         {
             TryDeleteAt(cellPos);
         }
+        Debug.Log("HandleDeleteMode");
     }
 
     void TryDeleteAt(Vector3Int cellPos)
@@ -182,7 +183,8 @@ public class Placer : MonoBehaviour
                 takencells.Remove(cellPos);
 
                 Destroy(obj.gameObject);
-
+                
+                Debug.Log("TryDelete");
                 return;
             }
         }

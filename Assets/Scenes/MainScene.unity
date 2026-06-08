@@ -1793,17 +1793,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208175558}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.6666666, y: 1.6666666, z: 1.6666666}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 743590877}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -170, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -25, y: 25}
+  m_SizeDelta: {x: 151.81, y: 100}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &208175563
 MonoBehaviour:
@@ -1881,7 +1881,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 524488496, guid: 240a704ce6c23af4590648f4b07eab5f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2752,7 +2752,7 @@ Grid:
   m_Enabled: 1
   m_CellSize: {x: 1.2, y: 1.2, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
-  m_CellLayout: 1
+  m_CellLayout: 0
   m_CellSwizzle: 0
 --- !u!4 &264834694
 Transform:
@@ -2798,7 +2798,7 @@ MonoBehaviour:
     lacunarity: 2.4
   biomes:
   - Name: Water
-    Tile: {fileID: 11400000, guid: fad4b4be0b48d4a40887114114c96fb6, type: 2}
+    Tile: {fileID: 11400000, guid: 6472c816e0307754b9c3e9f93012be7e, type: 2}
     minTemp: 0
     maxTemp: 1
     minHum: 0.9
@@ -2806,7 +2806,7 @@ MonoBehaviour:
     canBePlacedOn: 0
     itemPrefab: {fileID: 0}
   - Name: Grass
-    Tile: {fileID: 11400000, guid: 7cbc2e2870acb0e4d80d2de4f1fcb8d9, type: 2}
+    Tile: {fileID: 11400000, guid: dc77946bc42f597439f6dca8321ce784, type: 2}
     minTemp: 0.35
     maxTemp: 1
     minHum: 0.3
@@ -2814,7 +2814,7 @@ MonoBehaviour:
     canBePlacedOn: 1
     itemPrefab: {fileID: 6389402054215547463, guid: a9f8327f54707eb4e943b120a9a7a3d8, type: 3}
   - Name: Desert
-    Tile: {fileID: 11400000, guid: b2b957b09afde1140b6dc0347fda3b0d, type: 2}
+    Tile: {fileID: 11400000, guid: 9cecd027038e2d444b1e9d3a933ee6ba, type: 2}
     minTemp: 0.35
     maxTemp: 1
     minHum: 0
@@ -2822,7 +2822,7 @@ MonoBehaviour:
     canBePlacedOn: 1
     itemPrefab: {fileID: 2954546995789084878, guid: fed33e2f7045f504c93df693535fcb8e, type: 3}
   - Name: Snow
-    Tile: {fileID: 11400000, guid: 76c20c2c760b0e047a2daf253ccd7828, type: 2}
+    Tile: {fileID: 11400000, guid: 510415ed466f98046a5c7089f1dbbc78, type: 2}
     minTemp: 0
     maxTemp: 0.35
     minHum: 0.4
@@ -2830,7 +2830,7 @@ MonoBehaviour:
     canBePlacedOn: 1
     itemPrefab: {fileID: 2954546995789084878, guid: cc2604d295ceb6b4eb99637eb41b548f, type: 3}
   - Name: Other grass
-    Tile: {fileID: 11400000, guid: c78d70e0e1d2da54c8c23a6eec7a61d6, type: 2}
+    Tile: {fileID: 11400000, guid: 07356b097fca1e34e8de64b30c333609, type: 2}
     minTemp: 0
     maxTemp: 0.35
     minHum: 0
@@ -4135,17 +4135,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467757352}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.6666666, y: 1.6666666, z: 1.6666666}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 944470547}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 170, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 25, y: 25}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &467757354
 MonoBehaviour:
@@ -4241,7 +4241,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 2050206900, guid: 33360c28c4ccf454089d6fc95f828c7b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4545,7 +4545,7 @@ GameObject:
   - component: {fileID: 533670465}
   - component: {fileID: 533670464}
   m_Layer: 5
-  m_Name: HowToPlay
+  m_Name: Help Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4566,11 +4566,11 @@ RectTransform:
   - {fileID: 1717176192}
   m_Father: {fileID: 369178922}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -880}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &533670464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5072,7 +5072,7 @@ GameObject:
   - component: {fileID: 640219822}
   - component: {fileID: 640219821}
   m_Layer: 5
-  m_Name: Info Button
+  m_Name: Wiki Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5808,11 +5808,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 743590877}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2586, y: -37}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -50, y: -50}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &681950087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7199,6 +7199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 900268227}
+  - component: {fileID: 900268228}
   m_Layer: 5
   m_Name: 'BlackHoleMenu '
   m_TagString: Untagged
@@ -7232,6 +7233,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &900268228
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900268226}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1c0c3a603a6394646a11200408ec6534, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &907637798
 GameObject:
   m_ObjectHideFlags: 0
@@ -7990,11 +8013,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1025802890}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 587.15, y: -642.35}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 1, y: 0}
 --- !u!114 &1054897893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8831,7 +8854,7 @@ GameObject:
   - component: {fileID: 1104058052}
   - component: {fileID: 1104058051}
   m_Layer: 5
-  m_Name: Buttons
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8854,7 +8877,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 568, y: -365}
+  m_AnchoredPosition: {x: 527, y: -377}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1104058051
@@ -13260,7 +13283,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2060.1724, y: 3.8713684}
+  m_AnchoredPosition: {x: 2060.1724, y: 57}
   m_SizeDelta: {x: 1240.4978, y: 642.5544}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1836659230
